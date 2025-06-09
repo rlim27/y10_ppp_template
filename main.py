@@ -9,29 +9,36 @@ corrections = [0,0,0,0,0]
 imitations = ["O","O","O","O","O"]
 correctword = chosenwords[random.randint(0,28)]
 
-count = 0
 
 print("Welcome to wordle! Guess a 5 letter word within 6 tries. Each letter in your word will be marked as correct, in the wrong place, or incorrect. When all the letters in your word match the letters in the correct word, a good job message will be returned. Play.") 
 
-while count <= 5 or rightguess == False:
+count = 0
+while count <= 5 and rightguess == False:
+
     guess = input("Guess:")
+
     if len(guess) != 5: 
         print("Wrong length")
+
     else: 
         for letter in range(5): 
             if guess[letter] == correctword[letter]:
                 corrections[letter] = 2
-                count += 1
             elif guess[letter] in correctword:
                 corrections[letter] = 1
-                count += 1
             else: 
                 corrections[letter] = 0
-                count += 1 
-            if 0 not in corrections or 1 not in corrections:
-                rightguess = True 
+
 
         print(corrections)#change to imitations
+
+        if (not(0 in corrections)) and (not(1 in corrections)):
+            rightguess = True 
+            print("rightguess true")
+        
+        count += 1
+
+
 
 for i in range(5):
     if imitations[i] == 0:
@@ -43,5 +50,7 @@ for i in range(5):
 
 if rightguess == True:
     print('good job')
+    print(correctword)
 else:
     print('you lose')
+    print(correctword)
