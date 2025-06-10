@@ -61,10 +61,11 @@ def displaystats(wins, losses):
 choice = input("Select Menu Option")
 
 while choice in "PpSs":
-    choice = input("Select Menu Option")
     if choice == 'P' or choice == 'p':
         playround()
     elif choice == 'S' or choice == 's':
         displaystats(wins, losses) #fix later
         print(stats)
+    choice = input("Select Menu Option")
 
+print("bye")
