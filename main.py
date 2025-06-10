@@ -54,7 +54,10 @@ def displaystats():
     stats = ("wins:", wins, "losses:", losses)
 
 choice = input("Select Menu Option")
-if choice == "P" or choice == 'p':
-    playround()
-elif choice == 'S' or choice == 's':
-    displaystats()
+
+while choice != "Q" or choice != 'q':
+    choice = input("Select Menu Option")
+    if choice == "P" or choice == 'p':
+        playround()
+    elif choice == 'S' or choice == 's':
+        displaystats()
