@@ -18,12 +18,12 @@ def playround():
     wins = 0
     losses = 0
     count = 0
+
     while count <= 5 and rightguess == False:
         guess = input("Guess:")
         guess = guess.upper()
         if len(guess) != 5: 
             print("Wrong length")
-
         else: 
             for letter in range(5): 
                 if guess[letter] == correctword[letter]:
@@ -33,8 +33,7 @@ def playround():
                 else: 
                     corrections[letter] = 0
 
-
-            print(corrections)#change to imitations
+            print(corrections)#change to imitations after
 
             if (not(0 in corrections)) and (not(1 in corrections)):
                 rightguess = True 
@@ -48,16 +47,22 @@ def playround():
         print('You Lost')
         print(correctword)
         losses += 1
-    return wins, losses
+
+    return wins, losses #fix later
 
 def displaystats(wins, losses):
     stats = ("wins:", wins, "losses:", losses)
 
+    return stats
+
 choice = input("Select Menu Option")
 
-while choice != "Q" or choice != 'q':
+while choice in "PpSs":
     choice = input("Select Menu Option")
-    if choice == "P" or choice == 'p':
+    if choice == 'P' or choice == 'p':
         playround()
     elif choice == 'S' or choice == 's':
-        displaystats(wins, losses)
+        displaystats(wins, losses) #fix later
+        print(stats)
+    else:
+        pass
