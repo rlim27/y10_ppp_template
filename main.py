@@ -4,10 +4,6 @@ from random import randint
 from termcolor import colored # pip install termcolor
 
 
-
-
-
-
 print("Welcome to wordle! Guess a 5 letter word within 6 tries. Each letter in your word will be marked as correct, in the wrong place, or incorrect. When all the letters in your word match the letters in the correct word, a good job message will be returned. Play.") 
 
 def playround():
@@ -28,7 +24,7 @@ def playround():
             for letter in range(5): 
                 if guess[letter] == correctword[letter]:
                     corrections[letter] = 2
-                elif guess[letter] in correctword:
+                elif guess[letter] in correctword and (len(guess[letter] in correctword)) <= 2:
                     corrections[letter] = 1
                 else: 
                     corrections[letter] = 0
@@ -50,6 +46,7 @@ def playround():
 
     return wins, losses #fix later
 
+
 def displaystats(wins, losses):
     stats = ("wins:", wins, "losses:", losses)
 
@@ -64,5 +61,4 @@ while choice in "PpSs":
     elif choice == 'S' or choice == 's':
         displaystats(wins, losses) #fix later
         print(stats)
-    else:
-        pass
+
