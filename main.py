@@ -45,6 +45,7 @@ def playround():
 
 
             print(corrections)#change to imitations after
+            imitations = str(imitations)
             print(imitations)
 
             if (not(0 in corrections)) and (not(1 in corrections)):
