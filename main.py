@@ -29,7 +29,7 @@ def playround():
                 if guess[letter] == correctword[letter]:
                     corrections[letter] = 2
 
-                elif (guess[letter] in correctword) and (guess.count(guess[letter]) < numreps):
+                elif (guess[letter] in correctword) and (guess.count(guess[letter]) <= numreps):
                     corrections[letter] = 1
 
                 else: 
