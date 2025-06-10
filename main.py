@@ -1,7 +1,8 @@
 # testing
 import random 
 from random import randint
-from termcolor import colored # print(colored(text, colour)) for color??
+from colorama import Fore, init
+init()
 
 
 print("Welcome to wordle! Guess a 5 letter word within 6 tries. Each letter in your word will be marked as correct, in the wrong place, or incorrect. When all the letters in your word match the letters in the correct word, a good job message will be returned. Play.") 
@@ -29,15 +30,15 @@ def playround():
 
                 if guess[letter] == correctword[letter]:
                     corrections[letter] = 2
-                    imitations[letter] = colored(corrections.letter, 'green')
+                    imitations[letter] = Fore.GREEN + guess[letter]
 
                 elif (guess[letter] in correctword) and (guess.count(guess[letter]) <= numreps):
                     corrections[letter] = 1
-                    imitations[letter] = colored(corrections.letter, 'yellow')
+                    imitations[letter] = Fore.YELLOW + guess[letter]
 
                 else: 
                     corrections[letter] = 0
-                    imitations[letter] = colored(corrections.letter, 'red')
+                    imitations[letter] = Fore.RED + guess[letter]
 
 
             print(corrections)#change to imitations after
