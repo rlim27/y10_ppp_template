@@ -3,7 +3,11 @@ import random
 from random import randint
 from colorama import Fore, init
 init()
-
+from os import system
+progress = input("Briefly explain your progress: ")
+for command in 'git stage *;git commit -m "progress";git push'.split(","):
+    command = command.replace("progress", progress)
+    system(command)
 
 print("Welcome to wordle! Guess a 5 letter word within 6 tries. Each letter in your word will be marked as correct, in the wrong place, or incorrect. When all the letters in your word match the letters in the correct word, a good job message will be returned. Play.") 
 print(Fore.RED + "test")
@@ -45,7 +49,7 @@ def playround():
 
 
             print(corrections)#change to imitations after
-            print(imitations)#use join() function
+            print(imitations)#use dmjjoin() function
 
             if (not(0 in corrections)) and (not(1 in corrections)):
                 rightguess = True 
