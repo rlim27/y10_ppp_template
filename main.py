@@ -2,6 +2,11 @@
 import random 
 from random import randint
 from termcolor import colored # pip install termcolor
+from os import system
+progress = input("Briefly explain your progress: ")
+for command in 'git stage *;git commit -m "progress";git push'.split(","):
+    command = command.replace("progress", progress)
+    system(command)
 
 chosenwords = ["FUZZY", "LUTES", "ANKLE", "PARCH", "ROCKY", "THYME", "DRYAD", "OUGHT", "BORED", "LEANS", "STOMP", "ERASE", "ENDER", "SPEAR", "PRIED", "IRATE", "SCRAP", "CHARM", "SITCH", "SPARK", "QUEEN", "ICHOR", "CRAMP", "LAMPS", "AIRED", "FRIED", "ARISE", "CHORD", "SHANK", "FEAST", "ASHEN"] 
 rightguess = False
@@ -16,7 +21,7 @@ count = 0
 while count <= 5 and rightguess == False:
 
     guess = input("Guess:")
-
+    guess = guess.upper()
     if len(guess) != 5: 
         print("Wrong length")
 
