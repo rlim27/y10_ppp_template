@@ -51,7 +51,7 @@ def playround():
         print(correctword)
         losses += 1
 
-    return wins, losses #fix later
+    return wins, losses #fix later whys ts not wrking
 
 
 def displaystats(wins, losses):
@@ -65,7 +65,7 @@ while choice in "PpSs":
     if choice == 'P' or choice == 'p':
         playround()
     elif choice == 'S' or choice == 's':
-        displaystats(wins, losses) #fix later
+        displaystats(wins, losses) #from return wins + losses
         print(stats)
     choice = input("Select Menu Option: Play Round = P, Display Stats = S, Quit = any other key")
 
