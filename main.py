@@ -1,7 +1,7 @@
 # testing
 import random 
 from random import randint
-from termcolor import colored # pip install termcolor
+from termcolor import colored # print(colored(text, colour)) for color??
 
 
 
