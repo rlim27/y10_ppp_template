@@ -16,7 +16,7 @@ def playround():
     corrections = [0,0,0,0,0]
     correctword = chosenwords[random.randint(0,28)]
     wins = 0
-    imitations = ["O","O","O","O","O"]
+    imitations = ["","","","",""]
     losses = 0
     count = 0
 
