@@ -18,15 +18,20 @@ def playround():
     while count <= 5 and rightguess == False:
         guess = input("Guess:")
         guess = guess.upper()
+
+
         if len(guess) != 5: 
             print("Wrong length")
         else: 
             for letter in range(5): 
+                numreps = guess.count(guess[letter])
+
                 if guess[letter] == correctword[letter]:
                     corrections[letter] = 2
 
-                elif guess[letter] in correctword:
+                elif guess[letter] in correctword and numreps :
                     corrections[letter] = 1
+
                 else: 
                     corrections[letter] = 0
 
