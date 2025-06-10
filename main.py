@@ -24,12 +24,12 @@ def playround():
             print("Wrong length")
         else: 
             for letter in range(5): 
-                numreps = guess.count(guess[letter])
+                numreps = correctword.count(guess[letter])
 
                 if guess[letter] == correctword[letter]:
                     corrections[letter] = 2
 
-                elif guess[letter] in correctword and numreps :
+                elif guess[letter] in correctword and guess.count(guess[letter]) <= numreps:
                     corrections[letter] = 1
 
                 else: 
