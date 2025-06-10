@@ -24,7 +24,8 @@ def playround():
             for letter in range(5): 
                 if guess[letter] == correctword[letter]:
                     corrections[letter] = 2
-                elif guess[letter] in correctword and guess.count(guess[letter]) <= 2:
+
+                elif guess[letter] in correctword:
                     corrections[letter] = 1
                 else: 
                     corrections[letter] = 0
