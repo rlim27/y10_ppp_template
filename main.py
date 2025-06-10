@@ -2,11 +2,6 @@
 import random 
 from random import randint
 from termcolor import colored # print(colored(text, colour)) for color??
-from os import system
-progress = input("Briefly explain your progress: ")
-for command in 'git stage *;git commit -m "progress";git push'.split(","):
-    command = command.replace("progress", progress)
-    system(command)
 
 
 print("Welcome to wordle! Guess a 5 letter word within 6 tries. Each letter in your word will be marked as correct, in the wrong place, or incorrect. When all the letters in your word match the letters in the correct word, a good job message will be returned. Play.") 
@@ -17,6 +12,7 @@ def playround():
     corrections = [0,0,0,0,0]
     correctword = chosenwords[random.randint(0,28)]
     wins = 0
+    imitations = ["O","O","O","O","O"]
     losses = 0
     count = 0
 
@@ -33,14 +29,19 @@ def playround():
 
                 if guess[letter] == correctword[letter]:
                     corrections[letter] = 2
+                    imitations[letter] = colored(corrections.letter, 'green')
 
                 elif (guess[letter] in correctword) and (guess.count(guess[letter]) <= numreps):
                     corrections[letter] = 1
+                    imitations[letter] = colored(corrections.letter, 'yellow')
 
                 else: 
                     corrections[letter] = 0
+                    imitations[letter] = colored(corrections.letter, 'red')
+
 
             print(corrections)#change to imitations after
+            print(imitations)
 
             if (not(0 in corrections)) and (not(1 in corrections)):
                 rightguess = True 
