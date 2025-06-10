@@ -37,7 +37,6 @@ while count <= 5 and rightguess == False:
 
         if (not(0 in corrections)) and (not(1 in corrections)):
             rightguess = True 
-            print("rightguess true")
         
         count += 1
 
@@ -53,7 +52,7 @@ for i in range(5):
 
 if rightguess == True:
     print('good job')
-    print(correctword)
+    print(f("the word was{correctword}"))
 else:
     print('you lose')
     print(correctword)
