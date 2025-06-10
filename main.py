@@ -51,8 +51,8 @@ for i in range(5):
         imitations[i] = imitations[i] #Green
 
 if rightguess == True:
-    print('good job')
-    print(f("the word was{correctword}"))
+    print('Word Guessed')
+    print(correctword)
 else:
     print('you lose')
     print(correctword)
