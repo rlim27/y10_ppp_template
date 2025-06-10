@@ -48,7 +48,7 @@ def playround():
         print('You Lost')
         print(correctword)
         losses += 1
-    return wins, losses, rightguess
+    return wins, losses
 
 def displaystats(wins, losses):
     stats = ("wins:", wins, "losses:", losses)
@@ -60,4 +60,4 @@ while choice != "Q" or choice != 'q':
     if choice == "P" or choice == 'p':
         playround()
     elif choice == 'S' or choice == 's':
-        displaystats()
+        displaystats(wins, losses)
