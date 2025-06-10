@@ -50,7 +50,7 @@ def playround():
         losses += 1
     return wins, losses, rightguess
 
-def displaystats():
+def displaystats(wins, losses):
     stats = ("wins:", wins, "losses:", losses)
 
 choice = input("Select Menu Option")
