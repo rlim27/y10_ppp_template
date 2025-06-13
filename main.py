@@ -45,7 +45,7 @@ def playround():
 
 
             print(corrections)#change to imitations after
-            print(imitations)#use dmjjoin() function
+            print(imitations.join())#use dmjjoin() function
 
             if (not(0 in corrections)) and (not(1 in corrections)):
                 rightguess = True 
