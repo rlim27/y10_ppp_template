@@ -47,6 +47,7 @@ def playround():
                 rightguess = True 
         
             count += 1
+            
     if rightguess == True:
         print('Word Guessed')
         wins += 1
