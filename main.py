@@ -4,8 +4,7 @@ from random import randint
 from colorama import Fore, init
 init()
 
-wins = 0
-losses = 0
+
 chosenwords = ["FUZZY", "LUTES", "ANKLE", "PARCH", "ROCKY", "THYME", "DRYAD", "OUGHT", "BORED", "LEANS", "STOMP", "ERASE", "ENDER", "SPEAR", "PRIED", "IRATE", "SCRAP", "CHARM", "SITCH", "SPARK", "QUEEN", "ICHOR", "CRAMP", "LAMPS", "AIRED", "FRIED", "ARISE", "CHORD", "SHANK", "FEAST", "ASHEN"] 
 
 print("Welcome to wordle! Guess a 5 letter word within 6 tries. Each letter in your word will be marked as correct, in the wrong place, or incorrect. When all the letters in your word match the letters in the correct word, a good job message will be returned. Play.") 
@@ -16,6 +15,8 @@ def playround():
     correctword = chosenwords[random.randint(0,28)]
     imitations = ["","","","",""]
     count = 0
+    wins = 0
+    losses = 0
 
 
     while count <= 5 and rightguess == False:
@@ -61,10 +62,9 @@ def playround():
 
 
 choice = input("Select Menu Option: Play Round = P, Quit = any other key")
+
 while choice in "Pp":
     playround()
-
-    
     choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
 print("bye")
