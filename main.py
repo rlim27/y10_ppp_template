@@ -17,6 +17,7 @@ def playround():
     imitations = ["","","","",""]
     count = 0
 
+
     while count <= 5 and rightguess == False:
         guess = input("Guess:")
         guess = guess.upper()
@@ -62,7 +63,7 @@ def playround():
 choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 while choice in "Pp":
     playround()
-    print(f"You have {0} wins and {1} losses".format(wins, losses))
+
     
     choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
