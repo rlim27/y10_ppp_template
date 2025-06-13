@@ -54,7 +54,7 @@ def playround():
         print('Word Guessed')
         wins += 1
     else:
-        print('You Lost')
+        print('You Ran Out Of Guesses (Lost)')
         losses += 1
 
     return wins, losses #fix later why is ts not wrking
