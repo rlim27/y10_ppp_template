@@ -4,10 +4,6 @@ from random import randint
 from colorama import Fore, init
 init()
 from os import system
-progress = input("Briefly explain your progress: ")
-for command in 'git stage *;git commit -m "progress";git push'.split(","):
-    command = command.replace("progress", progress)
-    system(command)
 
 chosenwords = ["FUZZY", "LUTES", "ANKLE", "PARCH", "ROCKY", "THYME", "DRYAD", "OUGHT", "BORED", "LEANS", "STOMP", "ERASE", "ENDER", "SPEAR", "PRIED", "IRATE", "SCRAP", "CHARM", "SITCH", "SPARK", "QUEEN", "ICHOR", "CRAMP", "LAMPS", "AIRED", "FRIED", "ARISE", "CHORD", "SHANK", "FEAST", "ASHEN"] 
 
@@ -19,9 +15,6 @@ def playround():
     correctword = chosenwords[random.randint(0,28)]
     imitations = ["","","","",""]
     count = 0
-    wins = 0
-    losses = 0
-
 
     while count <= 5 and rightguess == False:
         guess = input("Guess:")
@@ -56,14 +49,10 @@ def playround():
 
     if rightguess == True:
         print('Word Guessed')
-        wins += 1
+
     else:
         print('You Ran Out Of Guesses (Lost)')
         print('The word was,', correctword)
-        losses += 1
-
-    return wins, losses
-
 
 choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
