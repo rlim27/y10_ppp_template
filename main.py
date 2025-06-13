@@ -59,7 +59,7 @@ def playround():
 
 
 def displaystats(wins, losses):
-    stats = ("wins:", wins, "losses:", losses)
+    stats = ("Wins:", wins, "Losses:", losses)
 
     return stats
 
