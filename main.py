@@ -55,22 +55,12 @@ def playround():
         print('The word was,', correctword)
         losses += 1
 
-    return wins, losses #fix later why is ts not wrking
+    return wins, losses
 
 
-def displaystats(wins, losses):
-    stats = ("Wins:", wins, "Losses:", losses)
-
-    return stats
-
-
-choice = input("Select Menu Option: Play Round = P, Display Stats = S, Quit = any other key")
-while choice in "PpSs":
-    if choice == 'P' or choice == 'p':
-        playround()
-    elif choice == 'S' or choice == 's':
-        displaystats(wins, losses) #from return wins + losses
-        print(stats)
+choice = input("Select Menu Option: Play Round = P, Quit = any other key")
+while choice in "Pp":
+    playround()
     choice = input("Select Menu Option: Play Round = P, Display Stats = S, Quit = any other key")
 
 print("bye")
