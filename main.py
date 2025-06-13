@@ -44,8 +44,7 @@ def playround():
                     imitations[letter] = Fore.RED + guess[letter]
 
 
-            print(corrections)#change to imitations after
-            print(" ".join(imitations))#use dmjjoin() function
+            print(" ".join(imitations))
 
             if (not(0 in corrections)) and (not(1 in corrections)):
                 rightguess = True 
@@ -53,11 +52,9 @@ def playround():
             count += 1
     if rightguess == True:
         print('Word Guessed')
-        print(correctword)
         wins += 1
     else:
         print('You Lost')
-        print(correctword)
         losses += 1
 
     return wins, losses #fix later whys ts not wrking
