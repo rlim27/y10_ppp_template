@@ -57,7 +57,7 @@ def playround():
         print('You Lost')
         losses += 1
 
-    return wins, losses #fix later whys ts not wrking
+    return wins, losses #fix later why is ts not wrking
 
 
 def displaystats(wins, losses):
