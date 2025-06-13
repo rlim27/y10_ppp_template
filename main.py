@@ -3,7 +3,11 @@ import random
 from random import randint
 from colorama import Fore, init
 init()
-
+from os import system
+progress = input("Briefly explain your progress: ")
+for command in 'git stage *;git commit -m "progress";git push'.split(","):
+    command = command.replace("progress", progress)
+    system(command)
 
 chosenwords = ["FUZZY", "LUTES", "ANKLE", "PARCH", "ROCKY", "THYME", "DRYAD", "OUGHT", "BORED", "LEANS", "STOMP", "ERASE", "ENDER", "SPEAR", "PRIED", "IRATE", "SCRAP", "CHARM", "SITCH", "SPARK", "QUEEN", "ICHOR", "CRAMP", "LAMPS", "AIRED", "FRIED", "ARISE", "CHORD", "SHANK", "FEAST", "ASHEN"] 
 
