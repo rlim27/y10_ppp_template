@@ -35,7 +35,7 @@ def playround():
                     corrections[letter] = 1
                     imitations[letter] = Fore.YELLOW + guess[letter]
 
-                else: 
+                else:
                     corrections[letter] = 0
                     imitations[letter] = Fore.RED + guess[letter]
 
