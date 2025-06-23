@@ -60,4 +60,4 @@ while choice in "Pp":
     playround()
     choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
-print("bye lol")
+print("get out")
