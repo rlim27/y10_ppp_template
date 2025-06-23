@@ -54,12 +54,12 @@ def verify(rightguess):
 
     else:
         print('You Ran Out Of Guesses (Lost)')
-
+        
 choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
 while choice in "Pp":
     playround()
-    
+    verify(rightguess)
     choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
 print("get out")
