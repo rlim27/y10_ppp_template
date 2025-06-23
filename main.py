@@ -58,7 +58,7 @@ def verify(rightguess):
 choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
 while choice in "Pp":
-    playround()
+    rightguess = playround()
     verify(rightguess)
     choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
