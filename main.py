@@ -46,18 +46,20 @@ def playround():
                 rightguess = True 
         
             count += 1
+    return rightguess
 
+def verify(rightguess):
     if rightguess == True:
         print('Word Guessed')
 
     else:
         print('You Ran Out Of Guesses (Lost)')
-        print('The word was,', correctword)
 
 choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
 while choice in "Pp":
     playround()
+    
     choice = input("Select Menu Option: Play Round = P, Quit = any other key")
 
 print("get out")
